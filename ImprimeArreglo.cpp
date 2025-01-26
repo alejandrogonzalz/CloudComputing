@@ -1,20 +1,22 @@
 #include <iostream>
 #include <omp.h>
 
-#define N 1000
-#define chunk 100
-#define mostrar 10
+#define N 10000
+#define chunk 1000
+#define mostrar 11
 
 void imprimeArreglo(float* d);
 
 int main() {
+	std::cout << "Tarea 1. Alejandro Gonzalez Almazan - A00517113\n";
+	std::cout << "\n";
 	std::cout << "Sumando arreglos en paralelo!\n";
 	float a[N], b[N], c[N];
 	int i;
 
 	for (i = 0; i < N; i++) {
-		a[i] = i * 10;
-		b[i] = (i + 3) * 3.7;
+		a[i] = i;
+		b[i] = i + 10;
 	}
 
 	int pedazos = chunk;
